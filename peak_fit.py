@@ -105,11 +105,11 @@ print(f"  width   sigma = {sig:.2f} +/- {dsig:.2f} channels   (FWHM = {2.355 * s
 print(f"  area    N     = {area:.0f} +/- {darea:.0f} counts")
 if live:
     print(f"  rate          = {area / live:.4g} +/- {darea / live:.2g} counts/s")
-print("  Values for the Excel templates:")
-print(f"      calibration_template: channel = {mu:.2f}, peak_sigma_ch = {sig:.2f}, peak_area = {area:.0f}, "
+print("Values for the Excel templates:")
+print(f"energy_calibration    : channel = {mu:.2f}, peak_sigma_ch = {sig:.2f}, peak_area = {area:.0f}, "
       f"channel_err = {dmu:.2f}")
-print(f"      efficiency_template : peak_area = {area:.0f}, peak_area_err = {darea:.0f}, live_time_s = {live}")
-print(f"      angle_scan_template : counts = {area:.0f}, counts_err = {darea:.0f}, live_time_s = {live}")
+print(f"efficiency_calibration: peak_area = {area:.0f}, peak_area_err = {darea:.0f}, live_time_s = {live}")
+print(f"angle_calibration: counts = {area:.0f}, counts_err = {darea:.0f}, live_time_s = {live}")
 
 # plot
 fig, (ax, axr) = plt.subplots(2, 1, figsize=(7.5, 6.5), sharex=True,
