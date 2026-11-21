@@ -34,13 +34,13 @@ Plots are saved under `plots/`.
 
 | Script | What it does | Input | Output | In the paper |
 |---|---|---|---|---|
-| `peak_fit.py` | Fits one photopeak with a Gaussian plus a linear background and prints the center, width and area. Set `FILE`, `LOW` and `HIGH` at the top. | one `.mca` file | `plots/peak_fits/<folder>/` | Fig. 11, Table 9 |
-| `angle_calibration_fit.py` | Fits the count rate vs. board angle with a Gaussian plus a constant to find the true zero angle θ₀ | `angle_calibration.xlsx` | `plots/calibration/angle_calibration_fit.png` | Fig. 5, Table 3 |
-| `energy_calibration_fit.py` | Linear fit of energy vs. channel | `energy_calibration.xlsx` | `plots/calibration/energy_calibration_fit.png` | Fig. 6, Table 4 |
-| `efficiency_calibration_fit.py` | Photopeak efficiency of each calibration line and a quadratic fit of ln ε vs. ln E | `efficiency_calibration.xlsx` | `plots/calibration/efficiency_calibration_fit.png` | Fig. 7, Table 5 |
+| `peak_fit.py` | Fits one photopeak with a Gaussian plus a linear background and prints the center, width and area. Set `FILE`, `LOW` and `HIGH` at the top. | one `.mca` file | `plots/peak_fits/<folder>/` | Fig. 10, Table VII |
+| `angle_calibration_fit.py` | Fits the count rate vs. board angle with a Gaussian plus a constant to find the true zero angle θ₀ | `angle_calibration.xlsx` | `plots/calibration/angle_calibration_fit.png` | Fig. 4, Table I |
+| `energy_calibration_fit.py` | Linear fit of energy vs. channel | `energy_calibration.xlsx` | `plots/calibration/energy_calibration_fit.png` | Fig. 5, Table II |
+| `efficiency_calibration_fit.py` | Photopeak efficiency of each calibration line and a quadratic fit of ln ε vs. ln E | `efficiency_calibration.xlsx` | `plots/calibration/efficiency_calibration_fit.png` | Fig. 6, Table III |
 | `scattering_peak_fits.py` | Fits the scattered peak in every spectrum of one part (`PART = 1` or `2` at the top) and converts its center to energy | `scattering_al_files/` or `scattering_plastic_files/` | `scattering_al_results.csv` or `scattering_plastic_results.csv`, `plots/peak_fits/<folder>/` | |
-| `energy_angle_combined.py` | Linear fit of 1/E′ vs. 1 − cos θ for both parts, gives mₑc² and E | both results files | `plots/scattering/energy_angle_fit_combined.png` | Fig. 8, Table 6 |
-| `cross_section_fit.py` | Count rate corrected for solid angle and efficiency vs. angle, fitted with the Thomson and Klein-Nishina cross sections (`PART = 1` or `2` at the top) | results file of the chosen part | `plots/scattering/cross_section_fit.png` or `cross_section_fit_plastic.png` | Figs. 9-10, Tables 7-8 |
+| `energy_angle_combined.py` | Linear fit of 1/E′ vs. 1 − cos θ for both parts, gives mₑc² and E | both results files | `plots/scattering/energy_angle_fit_combined.png` | Fig. 7, Table IV |
+| `cross_section_fit.py` | Count rate corrected for solid angle and efficiency vs. angle, fitted with the Thomson and Klein-Nishina cross sections (`PART = 1` or `2` at the top) | results file of the chosen part | `plots/scattering/cross_section_fit.png` or `cross_section_fit_plastic.png` | Figs. 8-9, Tables V-VI |
 
 ## Order
 
