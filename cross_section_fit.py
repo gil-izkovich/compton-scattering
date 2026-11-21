@@ -16,9 +16,11 @@ else:
 THETA0 = -2.614  # deg
 THETA_READ_ERR = 1 / np.sqrt(12)    
 E0, MEC2 = 661.657, 510.999  # keV
-D_CM, R_CM, GEO_ERR_CM = 15.0, 4.0, 1 / np.sqrt(12)
+D_CM, R_CM = 15.0, 4.0
+D_ERR_CM = 1 / np.sqrt(12)
+R_ERR_CM = 1 / np.sqrt(12) / 2  # half of the diameter error
 OMEGA = np.pi * R_CM**2 / D_CM**2  # sr
-OMEGA_REL_ERR = np.sqrt((2 * GEO_ERR_CM / R_CM) ** 2 + (2 * GEO_ERR_CM / D_CM) ** 2)
+OMEGA_REL_ERR = np.sqrt((2 * R_ERR_CM / R_CM) ** 2 + (2 * D_ERR_CM / D_CM) ** 2)
 
 # negative side
 rows = [r for r in csv.DictReader(open(FILE))
